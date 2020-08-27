@@ -1,6 +1,6 @@
 <template>
   <div class="home">
-    <Title msg="PokeVue" />
+    <Title title="PokeVue" />
     <div>Pokemon cards</div>
   </div>
 </template>

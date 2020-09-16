@@ -1,18 +1,21 @@
 <template>
   <div class="home">
-    <Title title="PokeVue" />
-    <div>Pokemon cards</div>
+    <div>
+      <b-jumbotron bg-variant="danger" text-variant="white" border-variant="dark">
+        <Title title="PokeVue" />
+      </b-jumbotron>
+    </div>
   </div>
 </template>
 
 <script>
 // @ is an alias to /src
-import Title from '@/components/Title'
+import Title from "@/components/Title";
 
 export default {
-  name: 'Home',
+  name: "Home",
   components: {
-    Title
-  }
-}
+    Title,
+  },
+};
 </script>

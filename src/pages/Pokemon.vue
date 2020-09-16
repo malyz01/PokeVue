@@ -1,35 +1,39 @@
 <template>
   <div class="container">
-    <Title title="My Pokemon" />
-    <div v-for="pokemon in allPokemon" :key="pokemon.name">
-      {{ pokemon.name }}
+    <div class="cardContainer">
+      <Card v-for="pokemon in allPokemon" :key="pokemon.id" :pokemon="pokemon" />
     </div>
   </div>
 </template>
 
 <script>
-import { mapGetters, mapActions } from 'vuex'
-import Title from '@/components/Title'
-
+import { mapGetters, mapActions } from "vuex";
+import Card from "../components/Card";
 export default {
-  name: 'Pokemon',
+  name: "Pokemon",
   components: {
-    Title
+    Card,
   },
   methods: {
-    ...mapActions(['fetchPokemons'])
+    ...mapActions(["fetchPokemons"]),
   },
   computed: {
-    ...mapGetters(['allPokemon'])
+    ...mapGetters(["allPokemon"]),
   },
   created() {
-    this.fetchPokemons()
-  }
-}
+    this.fetchPokemons();
+  },
+};
 </script>
 
 <style scoped>
 .container {
   padding: 1em;
+}
+
+.cardContainer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 </style>

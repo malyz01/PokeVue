@@ -1,21 +1,34 @@
 <template>
   <div class="home">
-    <div>
-      <b-jumbotron bg-variant="danger" text-variant="white" border-variant="dark">
-        <Title title="PokeVue" />
-      </b-jumbotron>
-    </div>
+    <b-jumbotron class="jumbo" text-variant="white" border-variant="dark">
+      <home-card></home-card>
+    </b-jumbotron>
   </div>
 </template>
 
 <script>
 // @ is an alias to /src
-import Title from "@/components/Title";
+import HomeCard from '@/components/HomeCard'
 
 export default {
-  name: "Home",
+  name: 'Home',
   components: {
-    Title,
-  },
-};
+    HomeCard
+  }
+}
 </script>
+
+<style scoped>
+.home {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.jumbo {
+  height: 780px;
+  padding: 3rem;
+  border-radius: 15px;
+  background-image: url('../assets/images/pokemonbg.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+</style>

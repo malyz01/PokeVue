@@ -8,14 +8,14 @@
 
 <script>
 // @ is an alias to /src
-import HomeCard from '@/components/HomeCard'
+import HomeCard from "@/components/HomeCard";
 
 export default {
-  name: 'Home',
+  name: "Home",
   components: {
-    HomeCard
-  }
-}
+    HomeCard,
+  },
+};
 </script>
 
 <style scoped>
@@ -25,9 +25,9 @@ export default {
 }
 .jumbo {
   height: 780px;
-  padding: 3rem;
+  padding: 6rem 2rem;
   border-radius: 15px;
-  background-image: url('../assets/images/pokemonbg.jpg');
+  background-image: url("../assets/images/pokemonbg.jpg");
   background-repeat: no-repeat;
   background-size: 100% 100%;
 }

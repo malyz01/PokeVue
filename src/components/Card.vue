@@ -21,6 +21,13 @@ export default {
   max-width: 300px;
   margin: 2rem 1rem;
   cursor: pointer;
+  -webkit-box-shadow: 0px 3px 25px 6px rgba(0, 0, 0, 0.44);
+  -moz-box-shadow: 0px 3px 25px 6px rgba(0, 0, 0, 0.44);
+  box-shadow: 0px 3px 25px 6px rgba(0, 0, 0, 0.44);
+}
+
+.card-body {
+  padding: 0;
 }
 
 .header {

@@ -29,6 +29,6 @@ export default {
   border-radius: 15px;
   background-image: url('../assets/images/pokemonbg.jpg');
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: 100% 100%;
 }
 </style>

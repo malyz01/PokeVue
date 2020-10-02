@@ -2,15 +2,22 @@
   <main class="main">
     <div class="row">
       <div class="col-sm inputContainer">test</div>
-      <div class="col-sm resultContainer"></div>
+      <div class="col-sm resultContainer">
+        <my-form></my-form>
+      </div>
     </div>
   </main>
 </template>
 
 <script>
+import myForm from "../components/Form";
+
 export default {
-  name: 'HomeCard'
-}
+  name: "HomeCard",
+  components: {
+    myForm,
+  },
+};
 </script>
 
 <style scoped>

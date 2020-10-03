@@ -1,21 +1,28 @@
 <template>
   <div class="home">
     <b-jumbotron class="jumbo" text-variant="white" border-variant="dark">
-      <home-card></home-card>
+      <div class="row">
+        <div class="col-sm inputContainer">
+          <h3>Welcome to Pokevue!</h3>
+        </div>
+        <div class="col-sm resultContainer">
+          <c-form></c-form>
+        </div>
+      </div>
     </b-jumbotron>
   </div>
 </template>
 
 <script>
 // @ is an alias to /src
-import HomeCard from "@/components/HomeCard";
+import cForm from '../views/Home/Form'
 
 export default {
-  name: "Home",
+  name: 'Home',
   components: {
-    HomeCard,
-  },
-};
+    cForm
+  }
+}
 </script>
 
 <style scoped>
@@ -25,10 +32,22 @@ export default {
 }
 .jumbo {
   height: 780px;
-  padding: 6rem 2rem;
-  border-radius: 15px;
-  background-image: url("../assets/images/pokemonbg.jpg");
+  padding: 6rem 2.5rem;
+  background-image: url('../assets/images/pokemonbg.jpg');
   background-repeat: no-repeat;
   background-size: 100% 100%;
+}
+.row {
+  height: 100%;
+  border-radius: 15px;
+  overflow: hidden;
+}
+.inputContainer {
+  background-color: cornflowerblue;
+  padding: 2rem;
+}
+.resultContainer {
+  background-color: darkgrey;
+  padding: 0;
 }
 </style>

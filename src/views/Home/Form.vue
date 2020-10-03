@@ -1,12 +1,13 @@
 <template>
   <main class="main">
-    <form :submit="onSubmit">
+    <form @submit="onSubmit">
       <div>
-        <input v-model="query" v-on:keyup.enter="onSubmit" type="text" />
+        <input v-model="query" type="text" />
       </div>
       <div>
         <input v-model="second" type="text" />
       </div>
+      <button type="submit">Submits</button>
     </form>
   </main>
 </template>
@@ -23,6 +24,7 @@ export default {
   methods: {
     onSubmit() {
       alert(this.query)
+      alert(this.second)
     }
   }
 }
